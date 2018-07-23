@@ -54,7 +54,8 @@ var Player = function(id){
 		self.updateSpd();
 		super_update();
 		if(self.pressingAttack){
-			self.shootBullet(self.mouseAngle);
+			for(var i = -3; i < 3; i++)
+				self.shootBullet(i*10 + self.mouseAngle);
 		}
 	}
 
